@@ -1,13 +1,13 @@
 # University Management API Gateway
 
 
-Welcome to the University Management API Gateway project, a tutorial project designed to help you level up your web development skills as part of the "Programming Hero Next Level Web Development Course."
+Welcome to the University Management API Gateway initiative! This project serves as your portal to mastering web development intricacies. Tailored to provide a comprehensive learning experience, this endeavor goes beyond mere theoretical knowledge, guiding you through the practical application of key concepts in a structured, intuitive manner.
 
 ### Project Overview:
 
 This GitHub repository hosts a comprehensive tutorial and project for building a University Management API Gateway. Whether you're a beginner or an experienced developer, this project offers step-by-step instructions, code examples, and best practices to guide you through the process. By the end of this hands-on tutorial, you'll have a functional API Gateway that includes integration with two essential services: um-auth (University Management Auth Service) and um-core (University Management Core Service).
 
-### What You'll Learn:
+### What We'll Learn:
 
 - Setting up a Node.js project structure.
 - Creating a robust API Gateway using Express.js.
@@ -22,5 +22,7 @@ API Gateways are critical components in modern web development, enabling efficie
 ### Get Started:
 
 Clone this repository and follow the tutorial to embark on your journey to becoming a proficient web developer. Enhance your web development skills and build a strong foundation for working with API Gateway architectures.
+
+![UNIVERSITY MANAGEMENT ER Diagram](https://i.ibb.co/hHKZ4X1/UM-ERD.png)
 
 - [API Documentation](https://documenter.getpostman.com/view/26694209/2s9YC5zCgD)
