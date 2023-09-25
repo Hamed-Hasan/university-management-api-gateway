@@ -28,3 +28,29 @@ const getByIdFromDB = async (req: Request, res: Response, next: NextFunction) =>
     next(error);
   }
 };
+
+const updateOneInDB = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicFacultyService.updateOneInDB(req);
+    sendResponse(res, result);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const deleteByIdFromDB = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicFacultyService.deleteByIdFromDB(req);
+    sendResponse(res, result);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const AcademicFacultyController = {
+  getAllFromDB,
+  getByIdFromDB,
+  updateOneInDB,
+  deleteByIdFromDB,
+  insertIntoDB
+};
