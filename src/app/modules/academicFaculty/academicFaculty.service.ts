@@ -30,3 +30,35 @@ const getByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
   });
   return response;
 };
+
+const updateOneInDB = async (req: Request): Promise<IGenericResponse> => {
+  const { id } = req.params;
+  const response: IGenericResponse = await HttpService.patch(
+    `/academic-faculties/${id}`,
+    req.body,
+    {
+      headers: {
+        Authorization: req.headers.authorization
+      }
+    }
+  );
+  return response;
+};
+
+const deleteByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
+  const { id } = req.params;
+  const response: IGenericResponse = await HttpService.delete(`/academic-faculties/${id}`, {
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
+  return response;
+};
+
+export const AcademicFacultyService = {
+  getAllFromDB,
+  getByIdFromDB,
+  updateOneInDB,
+  deleteByIdFromDB,
+  insertIntoDB
+};
