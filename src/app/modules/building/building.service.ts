@@ -31,3 +31,31 @@ const insertIntoDB = async (req: Request): Promise<IGenericResponse> => {
   });
   return response;
 };
+
+const updateOneInDB = async (req: Request): Promise<IGenericResponse> => {
+  const { id } = req.params;
+  const response: IGenericResponse = await CoreService.patch(`/buildings/${id}`, req.body, {
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
+  return response;
+};
+
+const deleteByIdFromDB = async (req: Request): Promise<IGenericResponse> => {
+  const { id } = req.params;
+  const response: IGenericResponse = await CoreService.delete(`/buildings/${id}`, {
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
+  return response;
+};
+
+export const BuildingService = {
+  getAllFromDB,
+  getByIdFromDB,
+  updateOneInDB,
+  deleteByIdFromDB,
+  insertIntoDB
+};
